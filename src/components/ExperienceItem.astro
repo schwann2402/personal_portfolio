@@ -1,0 +1,16 @@
+---
+ const { project } = Astro.props
+---
+
+<span class="absolute flex items-center justify-center w-6 h-6 bg-black-100 rounded-full -start-3 ring-8 ring-white dark:ring-black-900 dark:bg-black-100">
+  <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="black"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-device-desktop"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 5a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v10a1 1 0 0 1 -1 1h-16a1 1 0 0 1 -1 -1v-10z" /><path d="M7 20h10" /><path d="M9 16v4" /><path d="M15 16v4" /></svg>
+</span>
+<h3 class="flex items-center mb-1 text-lg font-semibold text-gray-900 dark:text-white pb-10">
+  
+  {
+    project.title === 'FullStack Notes App' &&   <span class="bg-blue-100 text-blue-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-blue-900 dark:text-blue-300 ms-3">Latest</span>
+  }
+</h3>
+<time class="block mb-2 text-xl font-normal leading-none text-white-400 dark:text-gray-500">{project.title}</time>
+<p class="mb-4 text-base font-normal text-gray-200 dark:text-gray-400">{project.description}</p>
+<a href={project.projectUrl} target="_blank" rel="noopener" class="inline-flex items-center px-4 py-2 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg hover:bg-gray-100 hover:text-blue-700 hover:bg-blue-100 focus:z-10 focus:ring-4 focus:outline-none focus:ring-gray-100 focus:text-blue-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700 dark:focus:ring-gray-700">Take a look ➡️</a>
